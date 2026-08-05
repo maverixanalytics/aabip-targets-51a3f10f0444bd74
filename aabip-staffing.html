@@ -1,7 +1,74 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AABIP 2026 — Coverage Timeline</title>
+<style>
+  :root{
+    --booth:#0f7b8a; --booth-bg:#d9eff2; --booth-ln:#7fc4cd;
+    --demo:#5c4b9c;  --demo-bg:#e4dff5;  --demo-ln:#a99ed4;
+    --sim:#a85a17;   --sim-bg:#f9e6d2;   --sim-ln:#dfa971;
+    --event:#8f2b3e; --event-bg:#f7dde2; --event-ln:#d99aa6;
+    --setup:#46525e; --setup-bg:#e4e8eb; --setup-ln:#a9b4bd;
+    --ink:#16202b; --muted:#6d7986; --line:#e2e7ec; --bg:#f6f8f9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  .wrap{max-width:1240px;margin:0 auto;padding:34px 22px 70px}
+  header{border-bottom:3px solid var(--booth);padding-bottom:16px;margin-bottom:6px}
+  h1{margin:0 0 4px;font-size:26px;letter-spacing:-.02em}
+  .sub{color:var(--muted);font-size:13.5px}
+  h2{font-size:19px;margin:36px 0 3px;letter-spacing:-.01em}
+  .daymeta{color:var(--muted);font-size:12.5px;margin-bottom:12px}
+
+  table{width:100%;border-collapse:collapse;background:#fff;table-layout:fixed;
+    box-shadow:0 1px 3px rgba(20,32,45,.10);border-radius:6px;overflow:hidden}
+  col.c-time{width:98px}
+  th{color:#fff;text-align:left;font-size:10.5px;letter-spacing:.1em;
+    text-transform:uppercase;padding:9px 11px;font-weight:700}
+  th.h-time{background:#16202b}
+  th.h-booth{background:var(--booth)}
+  th.h-demo{background:var(--demo)}
+  th.h-sim{background:var(--sim)}
+  th.h-event{background:var(--event)}
+  td{padding:9px 11px;border:1px solid var(--line);vertical-align:top;font-size:13px}
+  td.time{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;
+    font-size:12px;background:#f2f5f6;color:#39434e}
+  td.booth{background:var(--booth-bg);border-left:3px solid var(--booth-ln)}
+  td.demo{background:var(--demo-bg);border-left:3px solid var(--demo-ln)}
+  td.sim{background:var(--sim-bg);border-left:3px solid var(--sim-ln)}
+  td.event{background:var(--event-bg);border-left:3px solid var(--event-ln)}
+  td.setup{background:var(--setup-bg);border-left:3px solid var(--setup-ln)}
+  td.off{background:#fbfcfc}
+  td .lbl{display:block;font-size:10px;letter-spacing:.07em;text-transform:uppercase;
+    font-weight:700;opacity:.62;margin-bottom:3px}
+  td .ppl{font-weight:600}
+  td .n{display:block;margin-top:3px;font-size:11.5px;font-style:italic;opacity:.72;font-weight:400}
+  td.booth .lbl,td.booth .n{color:var(--booth)}
+  td.demo .lbl,td.demo .n{color:var(--demo)}
+  td.sim .lbl,td.sim .n{color:var(--sim)}
+  td.event .lbl,td.event .n{color:var(--event)}
+  td.setup .lbl,td.setup .n{color:var(--setup)}
+  .tbd{font-weight:500;color:var(--muted);font-style:italic}
+
+  .callout{background:#fff;border-left:4px solid var(--event);padding:12px 16px;
+    margin:14px 0;border-radius:0 5px 5px 0;font-size:13px;
+    box-shadow:0 1px 3px rgba(20,32,45,.07)}
+  .callout strong{color:var(--event)}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:14px;margin-top:12px}
+  .card{background:#fff;border-radius:6px;padding:13px 15px;box-shadow:0 1px 3px rgba(20,32,45,.09)}
+  .card h3{margin:0 0 7px;font-size:14px}
+  .card ul{margin:0;padding-left:15px;font-size:12.5px;color:#3d4854}
+  .card li{margin-bottom:3px}
+  .b{color:var(--booth);font-weight:700}
+  .d{color:var(--demo);font-weight:700}
+  .s{color:var(--sim);font-weight:700}
+  .avail{color:var(--muted);font-weight:400;font-style:italic}
+  footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+  @media print{body{background:#fff}.wrap{padding:0}table{box-shadow:none}h2{page-break-after:avoid}}
+.nav{margin:0 0 18px;font-size:13px}.nav a{color:#0f7b8a;text-decoration:none;margin-right:14px;font-weight:600}.nav a:hover{text-decoration:underline}@media (max-width:760px){.wrap{padding:18px 12px 50px}h1{font-size:20px}h2{font-size:17px;margin-top:28px}.sub{font-size:12.5px}table{box-shadow:none;background:transparent;table-layout:auto;border-radius:0}colgroup,col{display:none}table,tbody,tr,td{display:block;width:100%}table tr:first-child{display:none}tr{background:#fff;border-radius:6px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 3px rgba(20,32,45,.10)}td{border:none;border-bottom:1px solid var(--line);font-size:13.5px}tr td:last-child{border-bottom:none}td.off{display:none}tr.empty-row{display:none}td.time{background:#16202b;color:#fff;font-size:12px;padding:7px 12px}td.booth,td.demo,td.sim,td.event,td.setup{border-left-width:4px;border-left-style:solid}.grid2{grid-template-columns:1fr}.callout{font-size:12.5px;padding:11px 13px}}</style>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#1A4A5D">
 <meta name="mobile-web-app-capable" content="yes">
@@ -10,19 +77,251 @@
 <meta name="apple-mobile-web-app-title" content="AABIP Targets">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" href="favicon.png" sizes="32x32">
-<title>AABIP Booth Schedule - Booth 20-21</title>
-<style>*{box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;margin:0;padding:24px;background:#f5f5f7;color:#1d1d1f}.nav{margin-bottom:12px;font-size:13px}.nav a{color:#0066cc;text-decoration:none;margin-right:14px}.nav a:hover{text-decoration:underline}h1{font-size:28px;margin:0 0 4px;line-height:1.2}.sub{font-size:14px;color:#6e6e73;margin:0 0 18px}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:0 0 22px}.fact{background:#fff;border:1px solid #e5e5ea;border-radius:10px;padding:12px 14px}.fact .k{font-size:10px;font-weight:700;letter-spacing:.6px;color:#86868b;text-transform:uppercase;margin-bottom:4px}.fact .v{font-size:14px;font-weight:600;line-height:1.35}.fact .v a{color:#0066cc;text-decoration:none}.fact .v small{display:block;font-weight:400;font-size:12px;color:#6e6e73;margin-top:2px}h2{font-size:17px;margin:26px 0 10px;font-weight:700}.day{background:#fff;border:1px solid #e5e5ea;border-radius:12px;padding:14px 16px;margin-bottom:12px}.day-head{display:flex;align-items:baseline;gap:10px;margin-bottom:10px;flex-wrap:wrap}.day-name{font-size:16px;font-weight:700}.day-kind{font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:2px 8px;border-radius:10px;background:#eef0f3;color:#6e6e73}.day-kind.setup{background:#fff4e6;color:#b45309}.slots{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}.slot{border:1px solid #e5e5ea;border-radius:9px;padding:10px 12px;background:#fafafa}.slot.highlight{border-color:#34c759;background:#f1faf2}.slot-label{font-size:12px;font-weight:700;color:#1d1d1f;margin-bottom:2px}.slot-time{font-size:11px;color:#86868b;margin-bottom:8px}.slot-time.tbd{color:#b45309;font-weight:600}.reps{display:flex;flex-wrap:wrap;gap:6px}.rep{display:inline-block;background:#f0e7ff;color:#5b2cb3;padding:3px 10px;border-radius:11px;font-size:12px;font-weight:600}.rep.unassigned{background:#f2f2f5;color:#a1a1a6;font-weight:500;font-style:italic}.slot-note{font-size:11px;color:#6e6e73;line-height:1.45;margin-top:8px;padding-top:8px;border-top:1px solid #e8e8ed}.roster{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}@media (max-width:760px){body{padding:14px}h1{font-size:22px}.facts{grid-template-columns:1fr;gap:10px}.slots{grid-template-columns:1fr}}</style>
-</head><body>
-<div class="nav"><a href="index.html">All lists</a><a href="aabip.html">Target list</a><a href="aabip-staffing.html" style="font-weight:700">Booth schedule</a></div>
-<h1>AABIP Booth Schedule - Booth 20-21</h1>
-<div class="sub">Hyatt Regency Denver at Colorado Convention Center, August 19-22, 2026. All times Mountain Time. Ping Will if you need to swap a block.</div>
-<div class="facts"><div class="fact"><div class="k">Booth</div><div class="v">20-21</div></div><div class="fact"><div class="k">Venue</div><div class="v">Hyatt Regency Denver at Colorado Convention Center<small>650 15th St, Denver, CO 80202</small></div></div><div class="fact"><div class="k">Badges</div><div class="v">Will picks them up<small>Text 509.879.4948 and meet at the booth</small></div></div><div class="fact"><div class="k">Program</div><div class="v"><a href="https://aabipconference.com/scientific-program/" target="_blank">Scientific program</a><small><a href="https://aabipconference.com/program-at-a-glance/" target="_blank">Program at a glance</a></small></div></div></div>
-<h2>Coverage</h2>
-<div class="day"><div class="day-head"><span class="day-name">Wed, Aug 19</span><span class="day-kind setup">Setup</span></div><div class="slots"><div class="slot"><div class="slot-label">Setup</div><div class="slot-time">12:00 PM – 10:00 PM</div><div class="reps"><span class="rep unassigned">unassigned</span></div><div class="slot-note">Shouldn&#x27;t take the full window. Demo room may not open until 6:30 PM. Text Will when you land.</div></div></div></div>
-<div class="day"><div class="day-head"><span class="day-name">Thu, Aug 20</span><span class="day-kind exhibit">Exhibit hours</span></div><div class="slots"><div class="slot"><div class="slot-label">AM</div><div class="slot-time tbd">TBD</div><div class="reps"><span class="rep unassigned">unassigned</span></div></div><div class="slot"><div class="slot-label">PM</div><div class="slot-time tbd">TBD</div><div class="reps"><span class="rep unassigned">unassigned</span></div></div></div></div>
-<div class="day"><div class="day-head"><span class="day-name">Fri, Aug 21</span><span class="day-kind exhibit">Exhibit hours</span></div><div class="slots"><div class="slot"><div class="slot-label">AM</div><div class="slot-time tbd">TBD</div><div class="reps"><span class="rep unassigned">unassigned</span></div></div><div class="slot"><div class="slot-label">PM</div><div class="slot-time tbd">TBD</div><div class="reps"><span class="rep unassigned">unassigned</span></div></div><div class="slot highlight"><div class="slot-label">President&#x27;s Welcome Reception</div><div class="slot-time">6:00 – 7:30 PM</div><div class="reps"><span class="rep unassigned">unassigned</span></div><div class="slot-note">Held in the exhibition area — highest-traffic window of the show. Plan to be at the booth.</div></div></div></div>
-<div class="day"><div class="day-head"><span class="day-name">Sat, Aug 22</span><span class="day-kind exhibit">Exhibit hours</span></div><div class="slots"><div class="slot"><div class="slot-label">AM</div><div class="slot-time tbd">TBD</div><div class="reps"><span class="rep unassigned">unassigned</span></div></div><div class="slot"><div class="slot-label">PM</div><div class="slot-time tbd">TBD</div><div class="reps"><span class="rep unassigned">unassigned</span></div></div></div></div>
-<h2>Team</h2>
-<div class="day"><div class="roster"><span class="rep">Will</span><span class="rep">Brian</span><span class="rep">Chris Oleson</span><span class="rep">Carla</span><span class="rep">Jeremy</span><span class="rep">T.J.</span><span class="rep">Matt Basile</span></div></div>
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="index.html">All lists</a><a href="aabip.html">Target list</a><a href="aabip-staffing.html" style="opacity:.55">Coverage timeline</a></div>
+
+<header>
+  <h1>AABIP 2026 — Coverage Timeline</h1>
+  <div class="sub">August 19–22, 2026 · Hyatt Regency Denver at Colorado Convention Center · Booth 20-21 · All times Mountain</div>
+</header>
+
+<div class="callout"><strong>How this is built:</strong> reps rotate between the booth and the demo room across the show. Matt B. and Neil are the demo-room anchors — they stay in Agate B and cover each other's two-hour breaks, with a rotating rep alongside them each block. <strong>The demo room is never single-staffed;</strong> when it would be, a rep comes off the floor to fill it. The booth runs a two-rep minimum at all times.</div>
+
+<!-- ===================== WEDNESDAY ===================== -->
+<h2>Wednesday, August 19 — Setup</h2>
+<div class="daymeta">Exhibition set-up 12:00–7:00 PM · Decoration only 7:00–10:00 PM · All crates and packaging clear of the hall by 7:00 PM</div>
+<table>
+<colgroup><col class="c-time"><col><col><col><col></colgroup>
+<tr><th class="h-time">Time</th><th class="h-booth">Booth</th><th class="h-demo">Demo Room — Agate B</th><th class="h-sim">Simulation Sessions</th><th class="h-event">Events</th></tr>
+<tr>
+  <td class="time">12:00–7:00 PM</td>
+  <td class="setup"><span class="lbl">Booth Build</span><span class="ppl tbd">Crew TBD</span><span class="n">Crate check-in, frame, graphics hang. Hard stop 7:00 — all empties out of the hall.</span></td>
+  <td class="off"></td>
+  <td class="off" rowspan="2"></td>
+  <td class="off" rowspan="2"></td>
+</tr>
+<tr>
+  <td class="time">6:30–8:30 PM</td>
+  <td class="off"></td>
+  <td class="demo"><span class="lbl">Demo Room Build</span><span class="ppl tbd">Crew TBD</span><span class="n">Narwhal units, scopes, AV and lighting test, appointment board</span></td>
+</tr>
+</table>
+
+<!-- ===================== THURSDAY ===================== -->
+<h2>Thursday, August 20 — Day 1</h2>
+<div class="daymeta">Exhibition 9:00 AM–4:00 PM · Demo Room 8:00 AM–5:00 PM · Cryo Dinner 7:00–9:00 PM</div>
+<table>
+<colgroup><col class="c-time"><col><col><col><col></colgroup>
+<tr><th class="h-time">Time</th><th class="h-booth">Booth</th><th class="h-demo">Demo Room — Agate B</th><th class="h-sim">Simulation Sessions</th><th class="h-event">Events</th></tr>
+
+<tr>
+  <td class="time">8:00–8:30</td>
+  <td class="off"><span class="n" style="color:var(--muted)">Hall closed</span></td>
+  <td class="demo" rowspan="3"><span class="lbl">Demos</span><span class="ppl">Matt B., Neil, Karey</span><span class="n">Room opens 8:00 — 27 physicians pre-booked across Thu–Fri</span></td>
+  <td class="off" rowspan="6"></td>
+  <td class="off"></td>
+</tr>
+<tr>
+  <td class="time">8:30–9:00</td>
+  <td class="event"><span class="lbl">Team Huddle — at the Booth</span><span class="ppl">All hands</span><span class="n">Targeting-tool walkthrough + lead capture refresher before doors open</span></td>
+  <td class="off" rowspan="5"></td>
+</tr>
+<tr>
+  <td class="time">9:00–11:00</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Will, Collin, TJ</span><span class="n">Hall opens 9:00</span></td>
+</tr>
+<tr>
+  <td class="time">11:00–1:00</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Will, Meredith, Taylor</span></td>
+  <td class="demo"><span class="lbl">Demos</span><span class="ppl">Neil, Chris M., TJ</span><span class="n">Matt B. on break</span></td>
+</tr>
+<tr>
+  <td class="time">1:00–3:00</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Chris M., Karey, Meredith, Taylor</span></td>
+  <td class="demo"><span class="lbl">Demos</span><span class="ppl">Matt B., Will, Collin</span><span class="n">Neil on break</span></td>
+</tr>
+<tr>
+  <td class="time">3:00–4:00</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Will, Chris M., Karey, TJ</span><span class="n">Final hour — lead sweep before close</span></td>
+  <td class="demo" rowspan="2"><span class="lbl">Demos</span><span class="ppl">Matt B., Neil, Meredith</span><span class="n">Late slots run past hall close</span></td>
+</tr>
+<tr>
+  <td class="time">4:00–5:00</td>
+  <td class="off"><span class="n" style="color:var(--muted)">Hall closed</span></td>
+  <td class="off"></td>
+  <td class="off"></td>
+</tr>
+<tr>
+  <td class="time">6:30 PM</td>
+  <td class="off" rowspan="2"></td>
+  <td class="off" rowspan="2"></td>
+  <td class="off" rowspan="2"></td>
+  <td class="event"><span class="lbl">Dinner Setup</span><span class="ppl">Will, Chris M., Meredith</span><span class="n">Tamayo — seating chart, name cards, AV</span></td>
+</tr>
+<tr>
+  <td class="time">7:00–9:00 PM</td>
+  <td class="event"><span class="lbl">Cryo Dinner — Tamayo</span><span class="ppl">All hands</span><span class="n">56 Cryo targets RSVP'd. Will opens · Matt B. &amp; Neil on cryo depth · everyone else on tables</span></td>
+</tr>
+</table>
+
+<!-- ===================== FRIDAY ===================== -->
+<h2>Friday, August 21 — Day 2 <span style="font-weight:400;font-size:14px;color:var(--muted)">(heaviest day)</span></h2>
+<div class="daymeta">Exhibition 9:30 AM–7:30 PM (through the reception) · Demo Room 8:00 AM–5:00 PM · Three simulation sessions · Cryobiopsy panel</div>
+<table>
+<colgroup><col class="c-time"><col><col><col><col></colgroup>
+<tr><th class="h-time">Time</th><th class="h-booth">Booth</th><th class="h-demo">Demo Room — Agate B</th><th class="h-sim">Simulation Sessions — Room 2</th><th class="h-event">Events</th></tr>
+
+<tr>
+  <td class="time">7:30–8:00</td>
+  <td class="off" rowspan="2"><span class="n" style="color:var(--muted)">Hall closed</span></td>
+  <td class="off"></td>
+  <td class="sim" rowspan="3"><span class="lbl">Simulation 1</span><span class="ppl">Karey, TJ, Collin</span><span class="n">Stent Tips from the Experts · 7:30–9:30 · Eric joins if his schedule allows</span></td>
+  <td class="off" rowspan="6"></td>
+</tr>
+<tr>
+  <td class="time">8:00–9:30</td>
+  <td class="demo" rowspan="2"><span class="lbl">Demos</span><span class="ppl">Matt B., Neil</span><span class="n">Room opens 8:00 — balance of the 27 booked demos</span></td>
+</tr>
+<tr>
+  <td class="time">9:30–10:00</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Will, Chris M.</span><span class="n">Hall opens 9:30</span></td>
+</tr>
+<tr>
+  <td class="time">10:00–12:00</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Will, Chris M., TJ</span></td>
+  <td class="demo"><span class="lbl">Demos</span><span class="ppl">Neil, Meredith</span><span class="n">Matt B. on break — Meredith covers</span></td>
+  <td class="sim"><span class="lbl">Simulation 2</span><span class="ppl">Karey, Taylor, Collin</span><span class="n">10:00–12:00</span></td>
+</tr>
+<tr>
+  <td class="time">12:00–1:00</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Karey, Collin</span><span class="n">Holding the floor through the panel hour</span></td>
+  <td class="event"><span class="lbl">Panel — in the Demo Room</span><span class="ppl">Will, Chris M., Meredith, TJ, Taylor, Matt B., Neil</span><span class="n">The Future of Cryobiopsy · 3 MAB panelists · demo appointments blocked 12–1</span></td>
+  <td class="off"></td>
+</tr>
+<tr>
+  <td class="time">1:00–2:30</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Will, Chris M.</span></td>
+  <td class="demo"><span class="lbl">Demos</span><span class="ppl">Matt B., Neil, Taylor</span></td>
+  <td class="off"></td>
+  <td class="off" rowspan="4"></td>
+</tr>
+<tr>
+  <td class="time">2:30–3:00</td>
+  <td class="booth" rowspan="3"><span class="lbl">Booth</span><span class="ppl">Will, Chris M. <span style="font-weight:400">(to 3:00)</span>, Karey</span><span class="n">Chris M. off at 3:00; Will and Karey hold through the reception</span></td>
+  <td class="demo"><span class="lbl">Demos</span><span class="ppl">Matt B., Neil</span></td>
+  <td class="sim" rowspan="3"><span class="lbl">Simulation 3</span><span class="ppl">TJ, Taylor, Collin</span><span class="n">2:30–4:30</span></td>
+</tr>
+<tr>
+  <td class="time">3:00–4:30</td>
+  <td class="demo" rowspan="2"><span class="lbl">Demos</span><span class="ppl">Matt B., Meredith</span><span class="n">Neil on break · walk-ins · room closes 5:00</span></td>
+</tr>
+<tr>
+  <td class="time">4:30–5:00</td>
+  <td class="off"></td>
+</tr>
+<tr>
+  <td class="time">5:00–7:30 PM</td>
+  <td class="event"><span class="lbl">President's Welcome Reception — in the Exhibition Area</span><span class="ppl">Meredith, Karey, TJ, Taylor, Collin, Matt B., Neil</span><span class="n">Highest-traffic window of the show. Will and Chris M. join once the demo room is struck.</span></td>
+  <td class="setup"><span class="lbl">Strike Demo Room</span><span class="ppl">Will, Chris M.</span><span class="n">From 5:00 PM — units, scopes, AV, signage out of Agate B</span></td>
+  <td class="off"></td>
+  <td class="off"></td>
+</tr>
+</table>
+<div class="callout"><strong>Simulation round-robin:</strong> Karey, TJ and Taylor each cover two of three, two per session — Sim 1 Karey + TJ · Sim 2 Karey + Taylor · Sim 3 TJ + Taylor. <strong>Collin is on all three.</strong> Eric arrives too late Thursday for the booth or demo room — he's at the Cryo Dinner only, and joins Sim 1 Friday morning if his schedule allows before he departs.</div>
+
+<!-- ===================== SATURDAY ===================== -->
+<h2>Saturday, August 22 — Day 3 &amp; Teardown</h2>
+<div class="daymeta">Exhibition 9:00 AM–3:00 PM · Quiet dismantle 3:00–4:15 PM · Full dismantle 4:30–6:00 PM · No demo room</div>
+<table>
+<colgroup><col class="c-time"><col><col><col><col></colgroup>
+<tr><th class="h-time">Time</th><th class="h-booth">Booth</th><th class="h-demo">Demo Room — Agate B</th><th class="h-sim">Simulation Sessions</th><th class="h-event">Events</th></tr>
+<tr>
+  <td class="time">9:00–11:00</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Will, Collin, Matt B.</span><span class="n">Hall opens 9:00 · Karey has departed</span></td>
+  <td class="off" rowspan="5"><span class="n" style="color:var(--muted)">Struck Friday evening</span></td>
+  <td class="off" rowspan="5"></td>
+  <td class="off" rowspan="5"></td>
+</tr>
+<tr>
+  <td class="time">11:00–1:00</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Will, Chris M., TJ</span></td>
+</tr>
+<tr>
+  <td class="time">1:00–3:00</td>
+  <td class="booth"><span class="lbl">Booth</span><span class="ppl">Will, Collin, Matt B., Meredith, Taylor</span><span class="n">Final push — last lead sweep before close</span></td>
+</tr>
+<tr>
+  <td class="time">3:00–4:15</td>
+  <td class="setup"><span class="lbl">Quiet Dismantle</span><span class="ppl tbd">Crew TBD</span><span class="n">Within booth parameters only</span></td>
+</tr>
+<tr>
+  <td class="time">4:30–6:00</td>
+  <td class="setup"><span class="lbl">Full Dismantle</span><span class="ppl tbd">Crew TBD</span><span class="n">Crate-out, freight paperwork, lead-retrieval return</span></td>
+</tr>
+</table>
+
+<!-- ===================== BY REP ===================== -->
+<h2>Where Each Rep Works</h2>
+<div class="grid2">
+
+<div class="card"><h3>Will &nbsp;<span class="avail">Wed–Sun</span></h3><ul>
+<li>Thu: <span class="b">Booth</span> 9–1, 3–4 · <span class="d">Demo</span> 1–3 · Dinner host</li>
+<li>Fri: <span class="b">Booth</span> 9:30–12, 1–5 · <strong>Panel host 12–1</strong> · Demo strike 5:00 → reception</li>
+<li>Sat: <span class="b">Booth</span> 9–3</li></ul></div>
+
+<div class="card"><h3>Chris Mobley &nbsp;<span class="avail">Wed–Sat</span></h3><ul>
+<li>Thu: <span class="d">Demo</span> 11–1 · <span class="b">Booth</span> 1–4 · Dinner setup + table host</li>
+<li>Fri: <span class="b">Booth</span> 9:30–12, 1–3 · Panel · Demo strike 5:00 → reception</li>
+<li>Sat: <span class="b">Booth</span> 11–1</li></ul></div>
+
+<div class="card"><h3>Matt B. &nbsp;<span class="avail">Wed–Sat</span> · <span class="d">demo anchor</span></h3><ul>
+<li>Thu: <span class="d">Demo</span> 8–11, 1–5 · Dinner (cryo depth)</li>
+<li>Fri: <span class="d">Demo</span> 8–10, 1–5 · Panel · Reception</li>
+<li>Sat: <span class="b">Booth</span> 9–11, 1–3 <span class="avail">(no demo room Sat)</span></li></ul></div>
+
+<div class="card"><h3>Neil &nbsp;<span class="avail">Wed–Fri</span> · <span class="d">demo anchor</span></h3><ul>
+<li>Thu: <span class="d">Demo</span> 8–1, 3–5 · Dinner (cryo depth)</li>
+<li>Fri: <span class="d">Demo</span> 8–12, 1–3 · Panel · Reception</li></ul></div>
+
+<div class="card"><h3>Karey &nbsp;<span class="avail">Wed–Fri</span></h3><ul>
+<li>Thu: <span class="d">Demo</span> 8–11 · <span class="b">Booth</span> 1–4</li>
+<li>Fri: <span class="s">Sim 1 &amp; 2</span> · <span class="b">Booth</span> 12–1, 2:30–5 · Reception</li>
+<li>Departs before Saturday</li></ul></div>
+
+<div class="card"><h3>TJ &nbsp;<span class="avail">Wed–Sat</span></h3><ul>
+<li>Thu: <span class="b">Booth</span> 9–11, 3–4 · <span class="d">Demo</span> 11–1</li>
+<li>Fri: <span class="s">Sim 1 &amp; 3</span> · <span class="b">Booth</span> 10–12 · Panel · Reception</li>
+<li>Sat: <span class="b">Booth</span> 11–1</li></ul></div>
+
+<div class="card"><h3>Taylor &nbsp;<span class="avail">Wed–Sat</span></h3><ul>
+<li>Thu: <span class="b">Booth</span> 11–3</li>
+<li>Fri: <span class="s">Sim 2 &amp; 3</span> · <span class="d">Demo</span> 1–2:30 · Panel · Reception</li>
+<li>Sat: <span class="b">Booth</span> 1–3</li></ul></div>
+
+<div class="card"><h3>Collin &nbsp;<span class="avail">Wed–Sat</span></h3><ul>
+<li>Thu: <span class="b">Booth</span> 9–11 · <span class="d">Demo</span> 1–3</li>
+<li>Fri: <span class="s">Sim 1, 2 &amp; 3</span> · <span class="b">Booth</span> 12–1 · Reception</li>
+<li>Sat: <span class="b">Booth</span> 9–11, 1–3</li></ul></div>
+
+<div class="card"><h3>Meredith &nbsp;<span class="avail">Wed–Sat</span></h3><ul>
+<li>Thu <span class="avail">midday</span>: <span class="b">Booth</span> 11–3 · <span class="d">Demo</span> 3–5 · Dinner setup + host</li>
+<li>Fri <span class="avail">demo day</span>: <span class="d">Demo</span> 10–12, 3–5 · Panel · Reception</li>
+<li>Sat <span class="avail">afternoon</span>: <span class="b">Booth</span> 1–3</li></ul></div>
+
+<div class="card"><h3>Eric &nbsp;<span class="avail">Thu PM–Fri AM</span></h3><ul>
+<li>Thu: arrives late — <strong>Cryo Dinner only</strong>, no booth or demo room</li>
+<li>Fri: <span class="s">Sim 1</span> (7:30–9:30) if his flight allows, then departs</li></ul></div>
+
+</div>
+
+<footer>
+Built from the AABIP 2026 published exhibition hours and the Maverix activity calendar. Verified: no double-bookings, the demo room is never single-staffed, the booth never drops below two reps, and every rep except Will clears 2+ hours of break each day. Booth number, setup/dismantle crews, freight targets, and lead-retrieval unit counts still to be filled in.
+</footer>
+
+</div>
+<script>(function(){document.querySelectorAll('tr').forEach(function(r){var real=[].slice.call(r.children).filter(function(c){return c.tagName==='TD'&&!c.classList.contains('time')&&!c.classList.contains('off');});if(!real.length&&r.querySelector('td.time'))r.classList.add('empty-row');});})();</script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
-</body></html>
+</body>
+</html>
